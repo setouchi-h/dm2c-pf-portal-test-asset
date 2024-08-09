@@ -23,7 +23,7 @@ contract MintTestAsset is Script {
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("TestAsset", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0x9302ce59d765FeE24D91aEa8d1A8629EF33b9856;
+        address recipient = 0x5Cdc9010D01d6744Dd9213A0e28aa780210eC544;
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }
