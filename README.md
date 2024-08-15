@@ -7,13 +7,20 @@ This is a test asset for pf-portal project.
 These contracts are deployed on Sepolia Testnet.
 
 - TestAsset (ERC20): [0xf2a58f210956698D5fB3327348801dCCBBc7F317](https://sepolia.etherscan.io/address/0xf2a58f210956698d5fb3327348801dccbbc7f317)
+- TestToken (ERC721): [0xf2609e2e219e144c1A99F111f8c5f5e9756e1362](https://sepolia.etherscan.io/address/0xf2609e2e219e144c1A99F111f8c5f5e9756e1362)
 
 ## Usage
 
-### Deploy
+### Deploy ERC20
 
 ```shell
-$ forge script script/DeployTestAsset.s.sol:DeployTestAsset --rpc-url $SEPOLIA_RPC_URL --account defaultKey --sender <your address> --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
+$ forge script script/DeployTestAsset.s.sol:DeployTestERC20 --rpc-url $SEPOLIA_RPC_URL --account defaultKey --sender <your address> --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
+```
+
+### Deploy ERC721
+
+```shell
+$ forge script script/DeployTestAsset.s.sol:DeployTestERC721 --rpc-url $SEPOLIA_RPC_URL --account defaultKey --sender <your address> --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
 ```
 
 ### Mint ERC20
@@ -25,7 +32,19 @@ $ cast send 0xf2a58f210956698D5fB3327348801dCCBBc7F317 "mint(address,uint256)" <
 or
 
 ```shell
-$ forge script script/Interactions.s.sol:MintTestAsset --rpc-url $SEPOLIA_RPC_URL --account defaultKey --sender <your address> --broadcast
+$ forge script script/Interactions.s.sol:MintTestERC20 --rpc-url $SEPOLIA_RPC_URL --account defaultKey --sender <your address> --broadcast
+```
+
+### Mint ERC721
+
+```shell
+$ cast send 0xf2609e2e219e144c1A99F111f8c5f5e9756e1362 "safeMint(address)" <recipient> --rpc-url $SEPOLIA_RPC_URL  --account defaultKey
+```
+
+or
+
+```shell
+$ forge script script/Interactions.s.sol:MintTestERC721 --rpc-url $SEPOLIA_RPC_URL --account defaultKey --sender <your address> --broadcast
 ```
 
 ### Build

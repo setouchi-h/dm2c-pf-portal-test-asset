@@ -2,7 +2,6 @@
 pragma solidity ^0.8.20;
 
 import {Script, console} from "forge-std/Script.sol";
-import {TestAsset} from "../src/TestAsset.sol";
 
 contract HelperConfig is Script {
     struct NetworkConfig {
