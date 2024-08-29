@@ -20,13 +20,14 @@ contract MintTestSMP is Script {
     function mintUsingConfig(address testSMPAddress, address recipient) public {
         HelperConfig helperConfig = new HelperConfig();
         (address deployer) = helperConfig.activeNetworkConfig();
-        mint(testSMPAddress, deployer, recipient, 100 ether);
+        mint(testSMPAddress, deployer, recipient, 1_000_000_000 ether);
     }
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("TestSMP", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0x5Cdc9010D01d6744Dd9213A0e28aa780210eC544;
+        address recipient = 0x55a0f8034D04612F98B086337868Aec70a553D3c;
+
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }
@@ -42,13 +43,14 @@ contract MintTestWETH is Script {
     function mintUsingConfig(address testWETHAddress, address recipient) public {
         HelperConfig helperConfig = new HelperConfig();
         (address deployer) = helperConfig.activeNetworkConfig();
-        mint(testWETHAddress, deployer, recipient, 100 ether);
+        mint(testWETHAddress, deployer, recipient, 1000 ether);
     }
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("TestWETH", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0x5Cdc9010D01d6744Dd9213A0e28aa780210eC544;
+        address recipient = 0x55a0f8034D04612F98B086337868Aec70a553D3c;
+
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }
@@ -70,7 +72,8 @@ contract MintTestTetherToken is Script {
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("TestTetherToken", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0x5Cdc9010D01d6744Dd9213A0e28aa780210eC544;
+        address recipient = 0x4E98Edc6213001f01948B32d989189802c8644DE;
+
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }
@@ -92,7 +95,7 @@ contract MintTestERC721 is Script {
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("TestERC721", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0x5Cdc9010D01d6744Dd9213A0e28aa780210eC544;
+        address recipient = 0xa867D3F350cbc4eD3FF48cc1B92C1825002B64eC;
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }

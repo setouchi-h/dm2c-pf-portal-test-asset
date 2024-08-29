@@ -10,7 +10,7 @@ This is a test asset for pf-portal project.
 - WETH: [0xAa3FDEB44B7bb1C0A366685c0A10b1a2aEa6548C](https://explorer.testnet.dm2verse.dmm.com/address/0xAa3FDEB44B7bb1C0A366685c0A10b1a2aEa6548C)
 - Thether: [0x35B9B2B23f01452eab2095d074966F99A1d1aAd0](https://explorer.testnet.dm2verse.dmm.com/address/0x35B9B2B23f01452eab2095d074966F99A1d1aAd0)
 
-- ERC721: [0xB0C4aF27bC604724B9692463E6a6801eCAD61375](https://explorer.testnet.dm2verse.dmm.com/address/0xB0C4aF27bC604724B9692463E6a6801eCAD61375)
+- ERC721: [0x662a8cbF681774654D5D0C441Fb8333e3b2e5c2E](https://explorer.testnet.dm2verse.dmm.com/address/0x662a8cbF681774654D5D0C441Fb8333e3b2e5c2E)
 
 ### Sepolia Testnet
 

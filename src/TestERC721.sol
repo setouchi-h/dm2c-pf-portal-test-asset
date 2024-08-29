@@ -2,18 +2,27 @@
 pragma solidity ^0.8.20;
 
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
+import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 contract TestERC721 is ERC721 {
-    uint256 private _nextTokenId;
+    using Strings for uint256;
+
+    uint256 private s_nextTokenId;
 
     constructor() ERC721("TestERC721", "TE721") {}
 
-    function _baseURI() internal pure override returns (string memory) {
-        return "https://game.kanpani-girls.com/metadata/characters/";
+    function safeMint(address to) public {
+        uint256 tokenId = ++s_nextTokenId;
+        _safeMint(to, tokenId);
     }
 
-    function safeMint(address to) public {
-        uint256 tokenId = ++_nextTokenId;
-        _safeMint(to, tokenId);
+    function _baseURI() internal pure override returns (string memory) {
+        return "https://gateway.pinata.cloud/ipfs/Qmdj8vN2FMsKnRm8tBknJemqRF2ezURQhMDvmCbYRWHq4u/";
+    }
+
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        _requireOwned(tokenId);
+        return string(abi.encodePacked(_baseURI(), tokenId.toString(), ".json"));
     }
 }

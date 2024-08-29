@@ -1,0 +1,21 @@
+{
+  "name": "TestERC721 #17",
+  "title": "Test NFT #17",
+  "token_id": 17,
+  "description": "This is test NFT",
+  "image": "https://gateway.pinata.cloud/ipfs/QmYhkjnbydLqfge5Vfx1V5meRR6NN7i9io4DKVUjPfFV92",
+  "attributes": [
+    {
+      "trait_type": "Agility",
+      "value": 138
+    },
+    {
+      "trait_type": "Critical Damage",
+      "value": 1380
+    },
+    {
+      "trait_type": "Critical Rate",
+      "value": 190
+    }
+  ]
+}
