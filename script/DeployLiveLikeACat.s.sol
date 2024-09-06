@@ -2,18 +2,18 @@
 pragma solidity ^0.8.20;
 
 import {Script} from "forge-std/Script.sol";
-import {TestERC721} from "../src/TestERC721.sol";
+import {LiveLikeACat} from "../src/LiveLikeACat.sol";
 import {HelperConfig} from "./HelperConfig.s.sol";
 
-contract DeployTestERC721 is Script {
-    function run() external returns (TestERC721) {
+contract DeployLiveLikeACat is Script {
+    function run() external returns (LiveLikeACat) {
         HelperConfig helperConfig = new HelperConfig();
         (address deployer) = helperConfig.activeNetworkConfig();
 
         vm.startBroadcast(deployer);
-        TestERC721 testERC721 = new TestERC721();
+        LiveLikeACat liveLikeACat = new LiveLikeACat();
         vm.stopBroadcast();
 
-        return testERC721;
+        return liveLikeACat;
     }
 }

@@ -12,6 +12,9 @@ This is a test asset for pf-portal project.
 
 - ERC721: [0x662a8cbF681774654D5D0C441Fb8333e3b2e5c2E](https://explorer.testnet.dm2verse.dmm.com/address/0x662a8cbF681774654D5D0C441Fb8333e3b2e5c2E)
 
+- CryptoNinjaPartners: [0xFc7716eb39B662D380FCFe0b193609b4C6Ad0509](https://explorer.testnet.dm2verse.dmm.com/address/0xFc7716eb39B662D380FCFe0b193609b4C6Ad0509)
+- LiveLikeACat: [0x59037d62a581E963b6ed6e70fd1E985F205573DC](https://explorer.testnet.dm2verse.dmm.com/address/0x59037d62a581E963b6ed6e70fd1E985F205573DC)
+
 ### Sepolia Testnet
 
 - TestAsset (ERC20): [0xf2a58f210956698D5fB3327348801dCCBBc7F317](https://sepolia.etherscan.io/address/0xf2a58f210956698d5fb3327348801dccbbc7f317)
