@@ -1,0 +1,22 @@
+{
+  "name": "Inu NFT #87",
+  "token_type": 1,
+  "token_id": 87,
+  "description": "This is NFT number 87 in the Inu collection.",
+  "title": "Inu NFT",
+  "image": "https://gateway.pinata.cloud/ipfs/QmUPjADFGEKmfohdTaNcWhp7VGk26h5jXDA7v3VtTnTLcW",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Small"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Closed"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Inu NFT #53",
+  "token_type": 1,
+  "token_id": 53,
+  "description": "This is NFT number 53 in the Inu collection.",
+  "title": "Inu NFT",
+  "image": "https://gateway.pinata.cloud/ipfs/QmYx6GsYAKnNzZ9A6NvEKV9nf1VaDzJrqDR23Y8YSkebLU",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Yellow"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Big"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Frown"
+    }
+  ]
+}

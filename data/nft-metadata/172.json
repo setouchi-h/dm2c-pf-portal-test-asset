@@ -1,0 +1,22 @@
+{
+  "name": "Inu NFT #172",
+  "token_type": 1,
+  "token_id": 172,
+  "description": "This is NFT number 172 in the Inu collection.",
+  "title": "Inu NFT",
+  "image": "https://gateway.pinata.cloud/ipfs/QmUPjADFGEKmfohdTaNcWhp7VGk26h5jXDA7v3VtTnTLcW",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Round"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Closed"
+    }
+  ]
+}

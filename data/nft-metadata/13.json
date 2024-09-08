@@ -1,21 +1,22 @@
 {
-  "name": "TestERC721 #13",
-  "title": "Test NFT #13",
+  "name": "Inu NFT #13",
+  "token_type": 1,
   "token_id": 13,
-  "description": "This is test NFT",
-  "image": "https://gateway.pinata.cloud/ipfs/QmYhkjnbydLqfge5Vfx1V5meRR6NN7i9io4DKVUjPfFV92",
+  "description": "This is NFT number 13 in the Inu collection.",
+  "title": "Inu NFT",
+  "image": "https://gateway.pinata.cloud/ipfs/QmYx6GsYAKnNzZ9A6NvEKV9nf1VaDzJrqDR23Y8YSkebLU",
   "attributes": [
     {
-      "trait_type": "Agility",
-      "value": 138
+      "trait_type": "Background",
+      "value": "Yellow"
     },
     {
-      "trait_type": "Critical Damage",
-      "value": 1380
+      "trait_type": "Eyes",
+      "value": "Small"
     },
     {
-      "trait_type": "Critical Rate",
-      "value": 190
+      "trait_type": "Mouth",
+      "value": "Open"
     }
   ]
 }

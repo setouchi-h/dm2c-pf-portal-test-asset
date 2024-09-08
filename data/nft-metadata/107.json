@@ -1,0 +1,22 @@
+{
+  "name": "Inu NFT #107",
+  "token_type": 1,
+  "token_id": 107,
+  "description": "This is NFT number 107 in the Inu collection.",
+  "title": "Inu NFT",
+  "image": "https://gateway.pinata.cloud/ipfs/QmUPjADFGEKmfohdTaNcWhp7VGk26h5jXDA7v3VtTnTLcW",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Green"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Big"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Closed"
+    }
+  ]
+}

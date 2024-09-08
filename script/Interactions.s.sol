@@ -9,6 +9,7 @@ import {TestSMP} from "../src/TestSMP.sol";
 import {TestTetherToken} from "../src/TestTetherToken.sol";
 import {CryptoNinjaPartners} from "../src/CryptoNinjaPartners.sol";
 import {LiveLikeACat} from "../src/LiveLikeACat.sol";
+import {InuNFT} from "../src/InuNFT.sol";
 
 contract MintTestSMP is Script {
     function mint(address testSMPAddress, address deployer, address recipient, uint256 amount) public {
@@ -118,7 +119,7 @@ contract MintCryptoNinjaPartners is Script {
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("CryptoNinjaPartners", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0x04cD5d7eB3Fa481F7a5d0ecFc1C26bC98f8ba37e;
+        address recipient = 0xc1Fe4Dd2bb295f1283b08208f8a27f37e2E0C876;
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }
@@ -140,7 +141,29 @@ contract MintLiveLikeACat is Script {
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("LiveLikeACat", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0x04cD5d7eB3Fa481F7a5d0ecFc1C26bC98f8ba37e;
+        address recipient = 0xc1Fe4Dd2bb295f1283b08208f8a27f37e2E0C876;
+        mintUsingConfig(mostRecentlyDeployed, recipient);
+    }
+}
+
+contract MintInuNFT is Script {
+    function mint(address testERC721Address, address deployer, address recipient) public {
+        vm.startBroadcast(deployer);
+        InuNFT inuNFT = InuNFT(testERC721Address);
+        inuNFT.safeMint(recipient);
+        vm.stopBroadcast();
+    }
+
+    function mintUsingConfig(address testERC721Address, address recipient) public {
+        HelperConfig helperConfig = new HelperConfig();
+        (address deployer) = helperConfig.activeNetworkConfig();
+        mint(testERC721Address, deployer, recipient);
+    }
+
+    function run() external {
+        address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("InuNFT", block.chainid);
+        // ここでrecipientを指定
+        address recipient = 0xc1Fe4Dd2bb295f1283b08208f8a27f37e2E0C876;
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }
