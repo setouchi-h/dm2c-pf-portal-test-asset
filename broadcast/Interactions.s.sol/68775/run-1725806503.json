@@ -1,21 +1,21 @@
 {
   "transactions": [
     {
-      "hash": "0x8b6957b40b6eb134352393cbd9eb84966438c15e12b749a69b23055009efcc67",
+      "hash": "0x1068e512d94d9449961b2f842169df8338421e924106f03352d309e38425ace5",
       "transactionType": "CALL",
       "contractName": null,
       "contractAddress": "0x662a8cbf681774654d5d0c441fb8333e3b2e5c2e",
       "function": "safeMint(address)",
       "arguments": [
-        "0x9454F56EA40073dA22519c37Fa0152B9B0F66eE0"
+        "0x04cD5d7eB3Fa481F7a5d0ecFc1C26bC98f8ba37e"
       ],
       "transaction": {
         "from": "0x5cdc9010d01d6744dd9213a0e28aa780210ec544",
         "to": "0x662a8cbf681774654d5d0c441fb8333e3b2e5c2e",
-        "gas": "0x15339",
+        "gas": "0x14070",
         "value": "0x0",
-        "input": "0x40d097c30000000000000000000000009454f56ea40073da22519c37fa0152b9b0f66ee0",
-        "nonce": "0x63",
+        "input": "0x40d097c300000000000000000000000004cd5d7eb3fa481f7a5d0ecfc1c26bc98f8ba37e",
+        "nonce": "0x5f",
         "chainId": "0x10ca7"
       },
       "additionalContracts": [],
@@ -25,10 +25,10 @@
   "receipts": [],
   "libraries": [],
   "pending": [
-    "0x8b6957b40b6eb134352393cbd9eb84966438c15e12b749a69b23055009efcc67"
+    "0x1068e512d94d9449961b2f842169df8338421e924106f03352d309e38425ace5"
   ],
   "returns": {},
-  "timestamp": 1725806584,
+  "timestamp": 1725806503,
   "chain": 68775,
   "commit": "4ed2d25"
 }

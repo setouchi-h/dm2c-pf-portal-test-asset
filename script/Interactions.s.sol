@@ -73,8 +73,30 @@ contract MintTestTetherToken is Script {
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("TestTetherToken", block.chainid);
         // ここでrecipientを指定
-        address recipient = 0xbb849Ab7F144D82323b46F5266b295CdB9BF4959;
+        address recipient = 0x04cD5d7eB3Fa481F7a5d0ecFc1C26bC98f8ba37e;
 
+        mintUsingConfig(mostRecentlyDeployed, recipient);
+    }
+}
+
+contract MintTestERC721 is Script {
+    function mint(address testERC721Address, address deployer, address recipient) public {
+        vm.startBroadcast(deployer);
+        CryptoNinjaPartners cryptoNinjaPartners = CryptoNinjaPartners(testERC721Address);
+        cryptoNinjaPartners.safeMint(recipient);
+        vm.stopBroadcast();
+    }
+
+    function mintUsingConfig(address testERC721Address, address recipient) public {
+        HelperConfig helperConfig = new HelperConfig();
+        (address deployer) = helperConfig.activeNetworkConfig();
+        mint(testERC721Address, deployer, recipient);
+    }
+
+    function run() external {
+        address mostRecentlyDeployed = 0x662a8cbF681774654D5D0C441Fb8333e3b2e5c2E;
+        // ここでrecipientを指定
+        address recipient = 0x9454F56EA40073dA22519c37Fa0152B9B0F66eE0;
         mintUsingConfig(mostRecentlyDeployed, recipient);
     }
 }
